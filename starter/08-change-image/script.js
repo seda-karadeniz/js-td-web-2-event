@@ -6,6 +6,16 @@ EXERCICE 8 :
 Au clic sur l'image, change sa source par celle qui se trouve dans son attribut "data-hover".
 BONUS : switche entre les deux images : quand on re-clique, tu reviens à l'image originale et ainsi de suite
 */
+
+const e_image = document.querySelector(".material img");
+e_image.addEventListener('click', function(event){
+	console.log(event.target);
+	let image_alt = event.target.dataset.hover;
+	let e_imageSrc = event.target.src;
+	event.target.src = image_alt;
+})
+
+
 /* 
 AIDE POUR LE BONUS :
 Pour réaliser cet effet, il suffit d'échanger le contenu des deux propriétés src et dataset.hover :

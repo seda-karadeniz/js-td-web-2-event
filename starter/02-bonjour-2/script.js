@@ -11,7 +11,17 @@
 	* 3°) avec une arrow fonction et une expression conditionnelle
  */
 
-
+const e_buttonBjr = document.querySelector(".actions");
+console.log(e_buttonBjr);
+const e_name = document.querySelector("#prenom").value;
+e_buttonBjr.addEventListener('click', function () {
+	if (e_name !== "") {
+		console.log(`bonjour ${e_name}`);
+	}
+	else{
+		console.log("veuillez entrez votre code");
+	}
+});
 // Autre écriture
 
 
