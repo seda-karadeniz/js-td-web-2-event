@@ -12,3 +12,11 @@ EXERCICE 6 : Change couleur (3)
 */
 
 // ÉTAPE 3 :  en écoutant la soumission du formulaire
+let e_inputColor = document.querySelector('#colorChoice');
+const e_button = document.querySelector('#colorBtn');
+
+function f_colorChange(event) {
+	event.preventDefault(); /* arreter la soumission -- le comportement par defaut par exmple au clique changer de page */
+	document.body.style.backgroundColor = e_inputColor.nodeValue;
+}
+document.querySelector('#colorForm').addEventListener('submit',f_colorChange); /* ciblet le formulaire */

@@ -10,6 +10,27 @@ EXERCICE 5 : Change couleur (2) - Colorie la page en fonction des touches press�
 - Méthode : utilise un switch pour gérer les différents cas de touches
 */
 
+document.addEventListener('keypress', function (event){
+    console.log(event);
+    let color;
+    if (event.key === "r") {
+        color = "red";
+    }
+    else if (event.key === "j") {
+        color = "yellow";
+    }
+    else if (event.key === "v") {
+        color = "green";
+    }
+    else if (event.key === "b") {
+        color = "blue";
+    }
+    else{
+        color = "pink";
+    }
+document.body.style.backgroundColor = color;
+    
+})
 
 
 /* 

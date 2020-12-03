@@ -37,5 +37,14 @@ for (const e_next of a_nexts) {
 }
 /* for of pr parcourir plusieur balise sur le quel on veux traiter un mm evenemnt */
 
-
-
+/* previous */
+for (const e_previous of document.querySelectorAll('#previous')) {
+    e_previous.addEventListener('click',previousfunction);
+}
+function previousfunction() {
+    i--;
+    if (i < 0) {
+        i = gallery.length-1 ;
+    }
+    e_image.src = gallery[i];
+}
